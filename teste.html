@@ -1,4 +1,4 @@
-﻿<html lang="pt-br"><head>
+<html lang="pt-br"><head>
     <!----------------------- GOOGLE FONTS ---------------->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1256,13 +1256,9 @@
                             );
                             if (defaultOption) defaultOption.click();
                         } catch (error) {
-                            const errorText =
-                                error && error.message
-                                    ? String(error.message)
-                                    : "Não foi possível enviar agora. Tente novamente.";
                             showToast(
                                 "Falha no envio",
-                                errorText,
+                                "Não foi possível enviar agora. Tente novamente.",
                                 "error",
                                 4800
                             );
