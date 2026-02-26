@@ -1,3 +1,5 @@
+
+
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 
@@ -63,6 +65,90 @@
     <script>
         window.simulationRanges = {"1":{"credit":{"min":"35000","max":"530000","labelMin":"R$ 35 mil","labelMax":"R$ 530 mil"},"installment":{"min":"390","max":"5300","labelMin":"R$ 390","labelMax":"R$ 5,3 mil"}},"2":{"credit":{"min":"120000","max":"1500000","labelMin":"R$ 120 mil","labelMax":"R$ 1,5 mi"},"installment":{"min":"450","max":"6500","labelMin":"R$ 450","labelMax":"R$ 6,5 mil"}},"3":{"credit":{"min":"120000","max":"1000000","labelMin":"R$ 120 mil","labelMax":"R$ 1 mi"},"installment":{"min":"450","max":"6500","labelMin":"R$ 450","labelMax":"R$ 6,5 mil"}},"lastSimulation":{"plan_type":"","min":"","max":""}};
     </script>
+    <style>
+        :root {
+            --fluid-page-gutter: clamp(12px, 2vw, 32px);
+        }
+
+        .header .container,
+        .header [class*="max-w-[1280px]"] {
+            width: 100% !important;
+            max-width: none !important;
+            padding-left: var(--fluid-page-gutter) !important;
+            padding-right: var(--fluid-page-gutter) !important;
+        }
+
+        @media (min-width: 992px) {
+            .navbar-collapse {
+                display: flex !important;
+                align-items: center;
+                justify-content: flex-start !important;
+                width: 100%;
+                gap: 24px;
+            }
+
+            .navbar-collapse .navbar-nav {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+                margin: 0 !important;
+                padding: 0 !important;
+                margin-bottom: 0;
+            }
+
+            .navbar-collapse .desktop-social-links {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+
+            .navbar-collapse .mobile-menu-top {
+                display: flex !important;
+                align-items: center;
+                width: 100% !important;
+            }
+
+            .navbar-collapse .mobile-menu-top .social-icons {
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+
+            .navbar-collapse .desktop-social-links .social-icons-label {
+                margin-left: 8px !important;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-bottom {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .mobile-menu-bottom .cta-buttons {
+                width: 100%;
+            }
+
+            .mobile-menu-bottom .mobile-social-links {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 14px;
+                margin-left: 0;
+            }
+
+            .mobile-menu-bottom .mobile-social-links .social-icons-label {
+                margin-left: 0 !important;
+                white-space: normal;
+            }
+        }
+    </style>
 
 
     
@@ -152,22 +238,6 @@
             <img src="https://www.racon.com.br/site/img/logo.svg" alt="Racon Consórcios" class="logo">
           </a>
 
-          <!-- Desktop menu (match index.html) -->
-          <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 mb-0">
-            <li class="nav-item">
-              <a class="nav-link" href="racon.html">A Racon Consórcios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#como-funciona">Como Funciona</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#tipos-consorcio">Tipos de Consórcio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#footer">Fale Conosco</a>
-            </li>
-          </ul>
-
           <!-- CTA Buttons (desktop) -->
           <div class="cta-buttons d-none d-lg-flex">
             <a href="teste.html" class="bg-[#09A7DA] border-[#09A7DA] transition duration-300 ease-in-out py-2 px-6 h-[44px] rounded-[22px] w-[204px] flex items-center justify-center font-bold text-[15px] leading-[20px] tracking-normal text-center text-[#fff] hover:bg-[#0781b3] hover:border-[#0781b3] hover:text-[#fff] text-decoration-none">Simule seu Consórcio</a>
@@ -206,33 +276,33 @@
             </ul>
                <!-- Social media icons -->
                <div class="social-icons flex items-center gap-2">
-                              <a class="social-link">
+                              <a class="social-link" href="https://www.facebook.com/raconconsorcios" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.21961 18.6354H4.09079C3.56798 18.6354 3.14287 18.2393 3.14287 17.7521V11.1752H1.31763C0.794826 11.1752 0.369713 10.779 0.369713 10.2918V7.47355C0.369713 6.98635 0.794826 6.59019 1.31763 6.59019H3.14325V5.17909C3.14325 3.77972 3.61492 2.58946 4.50674 1.73668C5.40238 0.880341 6.65406 0.427636 8.12708 0.427636L10.5133 0.431192C11.0349 0.431903 11.4593 0.828065 11.4593 1.31455V3.93121C11.4593 4.41841 11.0342 4.81457 10.5118 4.81457L8.90518 4.81529C8.41519 4.81529 8.29041 4.90668 8.26369 4.93477C8.21981 4.98136 8.16753 5.11294 8.16753 5.47603V6.5909H10.3912C10.5587 6.5909 10.7209 6.62931 10.8602 6.70185C11.1609 6.85833 11.3479 7.15456 11.3479 7.47426L11.3467 10.2926C11.3467 10.7794 10.9216 11.1756 10.3988 11.1756H8.16753V17.7524C8.16753 18.2396 7.74241 18.6354 7.21961 18.6354ZM4.28846 17.5679H7.02194V10.6973C7.02194 10.3722 7.30585 10.1076 7.65464 10.1076H10.2011L10.2023 7.65812H7.65464C7.30585 7.65812 7.02194 7.39354 7.02194 7.0685V5.47567C7.02194 5.05853 7.06735 4.58449 7.40507 4.2278C7.81339 3.79679 8.45641 3.747 8.9048 3.747L10.3137 3.74629V1.49841L8.12593 1.49521C5.75919 1.49521 4.28808 2.90702 4.28808 5.1798V7.06885C4.28808 7.39389 4.00416 7.65847 3.65537 7.65847H1.51531V10.108H3.65576C4.00455 10.108 4.28846 10.3726 4.28846 10.6976V17.5679Z" fill="#09A7DA"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12675 0.791788C6.73147 0.791842 5.57851 1.21935 4.76413 1.99799C3.95445 2.77222 3.51285 3.86288 3.51285 5.17908V6.95434H1.31757C0.979304 6.95434 0.739305 7.20626 0.739305 7.47355V10.2918C0.739305 10.5591 0.979303 10.8111 1.31757 10.8111H3.51246V17.7521C3.51246 18.0193 3.75246 18.2713 4.09073 18.2713H7.24153C7.56816 18.2606 7.79781 18.0139 7.79781 17.7524V10.8114H10.3987C10.7371 10.8114 10.977 10.5594 10.977 10.2926L10.9782 7.47426C10.9781 7.29745 10.8741 7.12099 10.6875 7.02385C10.6047 6.98074 10.5022 6.95505 10.3911 6.95505H9.09446H7.79781V5.47603C7.79781 5.27996 7.81169 5.12807 7.83787 5.00937C7.86286 4.89612 7.90632 4.77873 7.99268 4.68706L7.99385 4.68582C8.13256 4.53994 8.39755 4.45115 8.90495 4.45113L10.5115 4.45042C10.8493 4.45042 11.0896 4.19859 11.0896 3.93121V1.31455C11.0896 1.04758 10.8498 0.795804 10.5127 0.795344L8.12675 0.791788ZM4.09073 18.9996C3.38339 18.9996 2.77316 18.4592 2.77316 17.7521V11.5394H1.31757C0.610229 11.5394 0 10.999 0 10.2918V7.47355C0 6.76644 0.610229 6.22603 1.31757 6.22603H2.77354V5.17908C2.77354 3.69654 3.27526 2.40669 4.24922 1.47537C5.22607 0.541389 6.57639 0.0634766 8.12702 0.0634766L10.5137 0.0670331C11.2199 0.0680205 11.8289 0.608561 11.8289 1.31455V3.93121C11.8289 4.63818 11.2189 5.17864 10.5119 5.17873L8.90529 5.17944C8.72844 5.17944 8.61765 5.19262 8.5528 5.20535C8.54444 5.26076 8.53712 5.34706 8.53712 5.47603V6.22674H10.3911C10.615 6.22674 10.8371 6.27793 11.0329 6.37992C11.4475 6.59572 11.7175 7.01175 11.7175 7.47426L11.7163 10.2926C11.7162 10.9993 11.1059 11.5397 10.3987 11.5397H8.53712V17.7524C8.53712 18.4595 7.92689 18.9999 7.21955 18.9999L4.09073 18.9996ZM5.06144 2.2244C5.8082 1.50754 6.86781 1.13105 8.12587 1.13105L10.6833 1.13479V4.11026L8.90493 4.11115C8.45493 4.11115 7.96527 4.1702 7.67533 4.47618C7.4417 4.72293 7.39153 5.06852 7.39153 5.47567V7.0685C7.39153 7.17362 7.49033 7.29396 7.65458 7.29396H10.572L10.5705 10.4718H7.65458C7.49033 10.4718 7.39153 10.5921 7.39153 10.6973V17.932H4.2884L4.28846 17.5679L3.91875 17.5682V10.6976C3.91875 10.5925 3.81995 10.4721 3.65569 10.4721H1.14559V7.29432H3.65531C3.81957 7.29432 3.91837 7.17398 3.91837 7.06885V5.17979C3.91837 3.96438 4.31358 2.94232 5.06144 2.2244ZM4.65806 17.2037V10.6976C4.65806 10.1527 4.18902 9.74383 3.65569 9.74383H1.8849V8.02263H3.65531C4.18864 8.02263 4.65767 7.6138 4.65767 7.06885V5.17979C4.65767 4.12244 4.99802 3.3022 5.5774 2.74602C6.15783 2.18882 7.01706 1.85941 8.12562 1.85936L9.94399 1.86202V3.38232L8.90474 3.38284C8.45795 3.38285 7.6614 3.42344 7.13477 3.97934C6.69295 4.44596 6.65222 5.04853 6.65222 5.47567V7.0685C6.65222 7.61345 7.12125 8.02227 7.65458 8.02227H9.83239L9.83158 9.74348H7.65458C7.12126 9.74348 6.65222 10.1523 6.65222 10.6973V17.2037H4.65806Z" fill="#09A7DA"/>
                   </svg>
                 </a>
-                                            <a class="social-link">
+                                            <a class="social-link" href="https://www.instagram.com/raconrondonopolis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13.9953 0.427734H5.51893C2.75989 0.427734 0.515625 2.63863 0.515625 5.35628V13.707C0.515625 16.4246 2.75989 18.6355 5.51857 18.6355H13.9953C16.754 18.6355 18.9983 16.4246 18.9983 13.707V5.35628C18.9983 2.63863 16.754 0.427734 13.9953 0.427734ZM17.9146 13.707C17.9146 15.8361 16.1562 17.5679 13.995 17.5679H5.51857C3.35733 17.5679 1.59895 15.8357 1.59895 13.707V5.35628C1.59895 3.22718 3.35733 1.49495 5.51857 1.49495H13.9953C16.1566 1.49495 17.9146 3.22718 17.9146 5.35628V13.707Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                       <path d="M9.75697 4.55298C6.97014 4.55298 4.70312 6.78628 4.70312 9.53167C4.70312 12.2771 6.97014 14.5104 9.75697 14.5104C12.5438 14.5104 14.8108 12.2771 14.8108 9.53167C14.8108 6.78628 12.5438 4.55298 9.75697 4.55298ZM9.75697 13.4428C7.56793 13.4428 5.78681 11.6882 5.78681 9.53167C5.78681 7.37519 7.56793 5.62055 9.75697 5.62055C11.946 5.62055 13.7271 7.37519 13.7271 9.53167C13.7271 11.6882 11.946 13.4428 9.75697 13.4428Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                       <path d="M14.9309 2.78516C14.1075 2.78516 13.4375 3.44519 13.4375 4.25636C13.4375 5.06753 14.1071 5.72756 14.9309 5.72756C15.7547 5.72756 16.4243 5.06753 16.4243 4.25636C16.4243 3.44519 15.7543 2.78516 14.9309 2.78516ZM14.9309 4.65963C14.7049 4.65963 14.5212 4.47862 14.5212 4.256C14.5212 4.03339 14.7049 3.85237 14.9309 3.85237C15.1569 3.85237 15.341 4.03339 15.341 4.256C15.341 4.47862 15.1573 4.65963 14.9309 4.65963Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                   </svg>
                 </a>
-                                            <a class="social-link">
+                                            <a class="social-link" href="https://www.linkedin.com/company/raconconsorcios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.56313 7.11084H1.83274C1.41437 7.11084 1.07422 7.42803 1.07422 7.81817V20.9286C1.07422 21.3183 1.41437 21.6355 1.83274 21.6355H5.56313C5.98108 21.6355 6.32123 21.3183 6.32123 20.9286V7.81817C6.32123 7.42803 5.98108 7.11084 5.56313 7.11084ZM5.02287 20.4248H2.37257V8.32197H5.02287V20.4248Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                       <path d="M3.6959 1C2.23719 1 1.05078 2.10634 1.05078 3.46659C1.05078 4.82684 2.23719 5.93317 3.6959 5.93317C5.1546 5.93317 6.34101 4.82684 6.34101 3.46659C6.34101 2.10634 5.1546 1 3.6959 1ZM3.6959 4.72245C2.95336 4.72245 2.34913 4.159 2.34913 3.46659C2.34913 2.77417 2.95336 2.21072 3.6959 2.21072C4.43843 2.21072 5.04266 2.77417 5.04266 3.46659C5.04266 4.159 4.43843 4.72245 3.6959 4.72245Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                       <path d="M18.3854 8.64811C17.4938 7.95408 16.3601 7.58288 15.1944 7.60303C14.4705 7.61553 13.763 7.77835 13.122 8.07297V7.78682C13.122 7.41401 12.7979 7.11133 12.3976 7.11133H8.59938C8.19959 7.11133 7.875 7.41361 7.875 7.78682V20.9605C7.875 21.3337 8.19916 21.636 8.59938 21.636H12.4728C12.8316 21.636 13.122 21.3647 13.122 21.0306V13.1762C13.122 12.504 13.686 11.9349 14.407 11.9147C15.156 11.8942 15.7723 12.456 15.7723 13.1496V21.0427C15.7723 21.37 16.0571 21.6356 16.4081 21.6356H20.1307C20.4817 21.6356 20.7665 21.37 20.7665 21.0427V13.3894C20.7665 11.5536 19.899 9.82538 18.3863 8.64811H18.3854ZM19.4673 20.4248H17.0707V13.1496C17.0707 11.8007 15.8938 10.7032 14.4472 10.7032C13.0006 10.7032 11.8237 11.8007 11.8237 13.1496V20.4248H9.17379V8.32205H11.8237V9.20188H11.8245C11.8245 9.34456 11.8777 9.48763 11.987 9.60331C12.2247 9.85359 12.6349 9.87697 12.9033 9.6553C13.543 9.12732 14.365 8.82827 15.2187 8.81376C16.0727 8.79844 16.9017 9.07049 17.5539 9.57791C18.7701 10.5246 19.4677 11.9139 19.4677 13.3898V20.4248H19.4673Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                   </svg>
                 </a>
-                                            <a class="social-link">
+                                            <a class="social-link" href="https://www.youtube.com/c/RaconCons%C3%B3rciosoficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                   <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15.8944 10.6073L10.7225 13.5131C10.4252 13.6803 10.0736 13.6742 9.78189 13.4967C9.49016 13.3192 9.31641 13.0056 9.31641 12.6572V6.89531C9.31641 6.54881 9.48925 6.23564 9.77915 6.05816C9.9305 5.9652 10.0983 5.91872 10.2661 5.91872C10.4202 5.91872 10.5743 5.95769 10.7165 6.0361L15.889 8.89169C16.1958 9.06118 16.3878 9.3889 16.3892 9.74714C16.3906 10.1054 16.2013 10.4345 15.8949 10.6064L15.8944 10.6073ZM10.6882 7.62024V11.9266L14.5538 9.75465L10.6882 7.62024Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                       <path d="M23.8253 14.338L23.8244 14.3488C23.8048 14.5423 23.6072 16.2635 22.7924 17.1387C21.8505 18.1683 20.7828 18.2932 20.2693 18.3533C20.2268 18.3585 20.1879 18.3627 20.1532 18.3674L20.1125 18.3716C17.0173 18.6036 12.3428 18.6355 12.2962 18.6355H12.2921H12.2879C12.2413 18.6355 7.56681 18.6036 4.44424 18.3726L4.40308 18.3683C4.3697 18.3636 4.33312 18.3594 4.29334 18.3547C3.78579 18.2946 2.72954 18.1693 1.78485 17.1025C1.00844 16.2363 0.784385 14.5521 0.761065 14.3629L0.758322 14.3385C0.751463 14.2582 0.585938 12.3412 0.585938 10.4171V8.6184C0.585938 6.69433 0.751006 4.7773 0.758322 4.69654L0.759694 4.68433C0.779355 4.49418 0.976889 2.8044 1.7876 1.92875C2.6733 0.93338 3.79311 0.801914 4.39531 0.731018C4.49042 0.719749 4.57272 0.71036 4.62851 0.700029L4.68246 0.692518C6.46941 0.517859 12.0726 0.431936 12.3099 0.42865H12.3172H12.3245C12.3712 0.42865 17.0452 0.460577 20.1403 0.691578L20.181 0.695805C20.2204 0.70097 20.2643 0.705664 20.3123 0.710829C20.8171 0.765762 21.8678 0.880323 22.7993 1.93251C23.5752 2.79876 23.7997 4.48291 23.8226 4.67213L23.8253 4.69654C23.8322 4.7773 23.9977 6.69386 23.9977 8.61793V10.4166C23.9977 12.3407 23.8322 14.2573 23.8253 14.338ZM22.626 8.61793C22.626 6.83706 22.4746 5.00266 22.4604 4.83411C22.4024 4.37023 22.1655 3.3049 21.7874 2.8828C21.2044 2.22408 20.6054 2.15881 20.1682 2.11139C20.1152 2.10576 20.0663 2.10012 20.0219 2.09449C17.0283 1.87241 12.5307 1.83813 12.3236 1.83673C12.0913 1.84001 6.57046 1.92687 4.83793 2.09214C4.74922 2.10717 4.6532 2.11843 4.55215 2.13017C4.03957 2.19074 3.33723 2.2729 2.79767 2.8828L2.78487 2.89689C2.41358 3.2941 2.18358 4.29088 2.12505 4.82894C2.11408 4.95618 1.95861 6.81217 1.95861 8.61793V10.4166C1.95861 12.1956 2.1095 14.0277 2.12414 14.1995C2.19364 14.746 2.43461 15.747 2.79721 16.1513C3.39804 16.8297 4.03179 16.9049 4.45064 16.9546C4.49088 16.9593 4.52791 16.964 4.56266 16.9683C7.59974 17.1917 12.1297 17.2246 12.2925 17.226C12.4548 17.2251 16.9835 17.1917 19.9936 16.9683C20.0306 16.9636 20.0708 16.9589 20.1143 16.9537C20.5455 16.9035 21.1966 16.8269 21.7947 16.1724L21.8002 16.1663C22.1715 15.7691 22.4015 14.755 22.46 14.2061C22.4705 14.0859 22.6264 12.2262 22.6264 10.4162V8.61746L22.626 8.61793Z" fill="#09A7DA" stroke="#09A7DA" stroke-width="0.5"/>
                   </svg>
                 </a>
-                <span class="social-icons-label text-[#04243B] text-[12px] font-bold uppercase tracking-[0.08em] whitespace-nowrap ml-8">uma social da empresa Randon</span>
+                <span class="social-icons-label inline-flex items-center gap-2 text-[#04243B] text-[12px] font-bold uppercase tracking-[0.08em] whitespace-nowrap ml-8">uma social da empresa <img class="inline-company-logo" src="assets/racon/partners/Logotipo-Randon.jpg" alt="Randon" style="height:16px;width:auto;max-width:64px;object-fit:contain;display:inline-block;"></span>
                           </div>
           </div>
 
@@ -475,7 +545,7 @@
                         <p class="lg:text-[17px] text-[16px] lg:leading-[30px] leading-[26px] text-[#202242] font-[400] max-w-[489px]">
                             A <strong>Rands</strong> integra as verticais de negócios da <strong>Randoncorp</strong>, multinacional brasileira reconhecida por soluções que facilitam a vida das pessoas por meio da mobilidade. Com presença global, reúne mais de 50 operações ao redor do mundo, chega a mais de 120 países com a comercialização de suas soluções e mantém posição de liderança nos mercados em que atua. <strong>O propósito da Randoncorp é conectar pessoas e riquezas para gerar prosperidade</strong> — e ele também orienta a Rands, uma das suas cinco verticais.
                         </p>
-                                                    <a class="flex items-center justify-between font-bold text-[18px] leading-[20px] px-[25px] pr-[19px] h-[63px] rounded-full bg-[#4BB3DF] text-white transition-colors hover:text-white group text-decoration-none w-full lg:max-w-[238px] lg:mt-[55px] lg:mt-[48px] mt-[28px]">
+                                                    <a href="https://www.rands.com.br/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between font-bold text-[18px] leading-[20px] px-[25px] pr-[19px] h-[63px] rounded-full bg-[#4BB3DF] text-white transition-colors hover:text-white group text-decoration-none w-full lg:max-w-[238px] lg:mt-[55px] lg:mt-[48px] mt-[28px]">
                                 Site Rands
                                 <span class="ml-2">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2 transition-transform duration-300 group-hover:translate-x-[2px]">
@@ -728,8 +798,8 @@
                     <div class="footer__contact lg:!flex !hidden">
                         <div class="footer__contact-item">
                             <h4 class="footer__contact-title">Televendas:</h4>
-                            <a
-                                class="footer__contact-link">0800 645 4888</a>
+                            <a href="tel:66996805066"
+                                class="footer__contact-link">66996805066</a>
                         </div>
 
                         <div class="footer__contact-item">
@@ -831,8 +901,8 @@
                 <div class="footer__contact block lg:hidden">
                         <div class="footer__contact-item">
                             <h4 class="footer__contact-title">Televendas:</h4>
-                            <a
-                                class="footer__contact-link">0800 645 4888</a>
+                            <a href="tel:66996805066"
+                                class="footer__contact-link">66996805066</a>
                         </div>
 
                         <div class="footer__contact-item">
@@ -959,6 +1029,43 @@
                     .querySelectorAll(".marquee-content.animate-marquee")
                     .forEach(setupTrack);
             });
+        })();
+    </script>
+
+    <script>
+        (() => {
+            const positionHeaderSocialLinks = () => {
+                const navCollapse = document.querySelector(".navbar-collapse");
+                if (!navCollapse) return;
+
+                const socialLinks = navCollapse.querySelector(".social-icons");
+                const navList = navCollapse.querySelector(".navbar-nav");
+                const mobileBottom = navCollapse.querySelector(".mobile-menu-bottom");
+                const mobileCta = mobileBottom?.querySelector(".cta-buttons");
+                if (!socialLinks || !mobileBottom) return;
+
+                const isDesktop = window.innerWidth >= 992;
+
+                if (isDesktop && navList) {
+                    socialLinks.classList.add("desktop-social-links");
+                    socialLinks.classList.remove("mobile-social-links");
+                    navList.insertAdjacentElement("afterend", socialLinks);
+                    return;
+                }
+
+                socialLinks.classList.remove("desktop-social-links");
+                socialLinks.classList.add("mobile-social-links");
+
+                if (mobileCta) {
+                    mobileCta.insertAdjacentElement("afterend", socialLinks);
+                    return;
+                }
+
+                mobileBottom.appendChild(socialLinks);
+            };
+
+            document.addEventListener("DOMContentLoaded", positionHeaderSocialLinks);
+            window.addEventListener("resize", positionHeaderSocialLinks);
         })();
     </script>
 
