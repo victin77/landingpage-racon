@@ -430,6 +430,79 @@
     }
   }
 
+  @media (min-width: 992px) and (hover: none) and (pointer: coarse) {
+    #home .banner__content {
+      align-items: flex-start;
+      gap: 24px;
+      padding-top: 48px;
+      padding-inline: 24px;
+    }
+
+    #home .banner__content .banner__text {
+      max-width: min(46vw, 430px);
+    }
+
+    #home .banner__content .banner__simulator {
+      flex: 0 0 min(42vw, 400px);
+      width: min(42vw, 400px);
+    }
+
+    #home .banner__content .banner__simulator > div {
+      max-width: none !important;
+      width: 100%;
+    }
+
+    #home .banner__content .banner__simulator form[simulation] {
+      padding: 24px 18px 20px !important;
+      border-radius: 18px;
+    }
+
+    #home .banner__content .banner__simulator h2 {
+      font-size: 20px !important;
+      line-height: 22px !important;
+      margin-bottom: 20px !important;
+    }
+
+    #home .banner__content .banner__simulator .grid.grid-cols-3 {
+      gap: 6px !important;
+      margin-bottom: 24px !important;
+    }
+
+    #home .banner__content .banner__simulator .label-form-simulation {
+      height: 74px;
+      gap: 8px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+
+    #home .banner__content .banner__simulator .label-form-simulation img {
+      width: 38px !important;
+      height: 38px !important;
+    }
+
+    #home .banner__content .banner__simulator .consortium-text {
+      font-size: 11px !important;
+      line-height: 13px !important;
+    }
+
+    #home .banner__content .banner__simulator .mt-8 {
+      margin-top: 24px !important;
+    }
+
+    #home .banner__content .banner__simulator .mb-\[50px\] {
+      margin-bottom: 24px !important;
+    }
+
+    #home .banner__content .banner__simulator .mb-\[32px\] {
+      margin-bottom: 20px !important;
+    }
+
+    #home .banner__content .banner__simulator .btn-consent-submit {
+      height: 52px !important;
+      font-size: 16px !important;
+    }
+  }
+
   /* Make layout fill the full viewport height */
   html,
   body {
@@ -2047,14 +2120,15 @@
             mobileSrc: "assets/banner2mobile.png",
             alt: "Banner secundário",
             desktopObjectPosition: "center center",
-            mobileObjectPosition: "88% 0%",
+            mobileObjectPosition: "84% 0%",
             mobileTransform: "translateY(2%) scale(1.03)",
           },
         ];
 
         let activeIndex = 0;
         let autoplayTimer = null;
-        bannerImage.style.transition = "opacity 0.45s ease";
+        bannerImage.style.transition = "opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
+        bannerImage.style.willChange = "opacity, transform";
 
         const getBannerSource = (banner) => {
           if (!banner) return "";
@@ -2097,7 +2171,7 @@
             bannerImage.alt = next.alt;
             applyBannerFocus(index);
             bannerImage.style.opacity = "1";
-          }, 220);
+          }, 320);
         };
 
         const rotateBanner = () => {
@@ -2148,5 +2222,6 @@
 </body>
 
 </html>
+
 
 
